@@ -1,1 +1,166 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VEYROHOOD — Enter the Hood</title>
+<meta name="description" content="10,000 hoods on Robinhood Chain. First 1,000 verified wallets are GTD OG. Complete missions, verify, refer." />
+<meta property="og:title" content="VEYROHOOD" />
+<meta property="og:description" content="10,000 hoods. 1,000 GTD. Verify to lock your wallet." />
+<meta property="og:image" content="https://pbs.twimg.com/media/HR_5MVMbcAAfiKX.jpg" />
+<link rel="icon" href="https://pbs.twimg.com/profile_images/2094829843871653888/8OmBJx3U.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{--acid:#c8ff00;--acid-2:#9dff2a;--red:#ff3355;--ink:#070807;--card:rgba(10,12,8,.78);--line:rgba(200,255,0,.18);--muted:#8b9278;--ok:#5dff8a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%;background:var(--ink);color:#f3f6ea;font-family:Outfit,system-ui,sans-serif}
+body{overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 420px at 50% -80px,rgba(200,255,0,.16),transparent 60%),radial-gradient(600px 500px at 110% 80%,rgba(255,51,85,.08),transparent 50%),repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.18) 3px 4px),#070807}
+.grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(200,255,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(200,255,0,.06) 1px,transparent 1px);background-size:28px 28px;animation:gridDrift 18s linear infinite}
+@keyframes gridDrift{to{background-position:28px 28px}}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:22px 16px 80px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(8,10,6,.7);backdrop-filter:blur(10px)}
+.live{display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#cfd8b8}
+.dot{width:8px;height:8px;border-radius:50%;background:#3dff6e;box-shadow:0 0 10px #3dff6e;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.35}}
+.chip{font-size:11px;color:#111;background:var(--acid);padding:6px 10px;border-radius:999px;font-weight:800}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;margin:28px 0 22px}
+.stage{position:relative;display:flex;justify-content:center}
+.frame{position:relative;width:min(420px,92vw);aspect-ratio:3/4;border-radius:28px;overflow:hidden;border:2px solid var(--acid);box-shadow:0 0 0 8px rgba(200,255,0,.06),0 30px 80px rgba(200,255,0,.16);background:#c8ff00;animation:float 4.2s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.frame img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;display:block}
+.scan{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 0%,rgba(200,255,0,.18) 48%,transparent 52%);animation:scan 2.8s linear infinite;mix-blend-mode:screen}
+@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+.visor{position:absolute;left:50%;top:42%;width:38%;height:7%;transform:translate(-50%,-50%);border-radius:6px;background:#19ff4a;box-shadow:0 0 18px #19ff4a,0 0 40px rgba(25,255,74,.5);animation:visor 3.6s steps(2) infinite;mix-blend-mode:screen;opacity:.85}
+@keyframes visor{0%,45%{background:#19ff4a;box-shadow:0 0 18px #19ff4a}50%,100%{background:#ff3355;box-shadow:0 0 18px #ff3355}}
+.orbit{position:absolute;inset:-18px;border-radius:36px;pointer-events:none;border:1px dashed rgba(200,255,0,.35);animation:spin 16s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.copy h1{font-family:"Press Start 2P",monospace;font-size:clamp(22px,4vw,34px);line-height:1.35;color:var(--acid);text-shadow:0 0 18px rgba(200,255,0,.35)}
+.copy p.lead{margin-top:14px;color:#c5ccb4;font-size:16px;line-height:1.6;max-width:460px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pill{border:1px solid var(--line);background:rgba(0,0,0,.35);padding:7px 10px;border-radius:999px;font-size:12px;color:#d7e0c4}
+.meters{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.meter{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px}
+.meter span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pix{margin-top:8px;font-family:"Press Start 2P",monospace;font-size:13px;color:var(--acid)}
+.bar{height:8px;background:#14180f;border-radius:99px;overflow:hidden;margin-top:8px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acid),#fff58a);transition:width .6s ease}
+.bar.red i{background:linear-gradient(90deg,var(--red),#ffb3c0)}
+.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;backdrop-filter:blur(12px);margin-bottom:12px}
+.kicker{color:var(--acid);font-size:11px;letter-spacing:.16em;font-weight:800;text-transform:uppercase}
+h2{font-size:22px;margin:6px 0 8px}
+.info{color:var(--muted);font-size:14px;line-height:1.55}
+.steps{display:flex;flex-direction:column;gap:10px}
+.step{border:1px solid #1c2414;background:#0b0e09;border-radius:18px;padding:14px;position:relative;overflow:hidden}
+.step.lock{opacity:.48;filter:grayscale(.35)}
+.step.active{border-color:rgba(200,255,0,.45);box-shadow:inset 0 0 0 1px rgba(200,255,0,.12)}
+.step.done{border-color:rgba(93,255,138,.35)}
+.step h3{font-size:16px;display:flex;align-items:center;gap:8px}
+.num{width:22px;height:22px;border-radius:6px;display:inline-grid;place-items:center;background:#151a10;color:var(--acid);font-size:11px;font-weight:800}
+button,.btn{display:block;width:100%;border:0;border-radius:14px;padding:13px 14px;font-size:14px;font-weight:800;cursor:pointer;text-align:center;text-decoration:none;font-family:Outfit,sans-serif;margin-top:10px}
+.primary{background:var(--acid);color:#111}
+.ghost{background:#12160e;color:#fff;border:1px solid #2a3320}
+.ok{background:#143018;color:#b9f7c8;border:1px solid #1f6b38}
+button:disabled{opacity:.45;cursor:not-allowed}
+label{display:block;margin:10px 0 6px;font-size:12px;font-weight:700;color:#c9d1b6}
+input{width:100%;padding:12px 13px;border-radius:12px;border:1px solid #2a3320;background:#070906;color:#fff;font-family:Outfit,sans-serif}
+.hp{position:absolute;left:-9999px;opacity:0;height:0}
+.wallets{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.wbtn{display:flex;align-items:center;gap:8px;background:#10150c;border:1px solid #26311a;color:#eaf3d8;border-radius:12px;padding:10px;font-size:13px;font-weight:700;cursor:pointer}
+.refbox{margin-top:10px;background:#070906;border:1px dashed rgba(200,255,0,.35);border-radius:14px;padding:12px;word-break:break-all;color:#dce7c4;font-size:13px}
+.msg{display:none;margin-top:10px;padding:10px;border-radius:12px;font-size:13px}
+.msg.ok{display:block;background:#0f2a16;border:1px solid #1f6b38;color:#b8f5cc}
+.msg.err{display:block;background:#2a1010;border:1px solid #7a2a2a;color:#ffb3b3}
+.board-row{display:flex;justify-content:space-between;gap:8px;padding:9px 0;border-bottom:1px solid #1a2113;font-size:13px;color:#c9d3b6}
+.tiny{font-size:11px;color:#7f876c;margin-top:8px}
+.walletline{margin-top:8px;font-size:12px;color:var(--acid);word-break:break-all}
+.modal{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.72);display:none;align-items:flex-end;justify-content:center;padding:16px}
+.modal.on{display:flex}
+.sheet{width:min(460px,100%);background:#0c1009;border:1px solid var(--line);border-radius:22px;padding:16px}
+.foot{text-align:center;color:#4d5540;font-size:11px;margin-top:18px}
+@media(max-width:860px){.hero,.layout{grid-template-columns:1fr}.frame{width:min(320px,78vw);aspect-ratio:1}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="grid"></div>
+<div class="wrap">
+  <div class="top"><div class="live"><span class="dot"></span><span id="live-line">LIVE · 0 wallets in</span></div><div class="chip">ROBINHOOD CHAIN</div></div>
+  <section class="hero">
+    <div class="stage"><div class="orbit"></div><div class="frame"><img src="https://pbs.twimg.com/media/HR_5MVMbcAAfiKX.jpg" alt="VeyroHood" /><div class="scan"></div><div class="visor"></div></div></div>
+    <div class="copy">
+      <h1>VEYRO<br>HOOD</h1>
+      <p class="lead">10,000 hoods on Robinhood Chain. First 1,000 verified wallets get GTD mint. The other 9,000 are FCFS among registered applicants at mint.</p>
+      <div class="pills"><span class="pill">10,000 supply</span><span class="pill">1,000 GTD OG</span><span class="pill">9,000 FCFS</span><span class="pill">Verify $0.25</span></div>
+      <div class="meters">
+        <div class="meter"><span>OG / GTD</span><div class="pix" id="og-pix">0000 / 1000</div><div class="bar" id="og-bar"><i></i></div></div>
+        <div class="meter"><span>Applicants</span><div class="pix" id="app-pix">0000</div><div class="bar red" id="app-bar"><i></i></div></div>
+      </div>
+    </div>
+  </section>
+  <div class="layout">
+    <div>
+      <div class="card"><div class="kicker">Missions</div><h2>Unlock each gate.</h2><p class="info">Every step must be finished before the next one opens. Fake links and duplicate wallets are rejected.</p></div>
+      <div class="steps">
+        <div class="step active" id="step-connect"><h3><span class="num">1</span> Connect wallet</h3><p class="info">MetaMask, Rabby, OKX and other injected EVM wallets. Network switches to Robinhood Chain.</p><button class="primary" id="open-wallets" type="button">CHOOSE WALLET</button><div class="walletline" id="wallet-line"></div></div>
+        <div class="step lock" id="step-follow"><h3><span class="num">2</span> Follow @VeyroHood</h3><p class="info">Open X, follow the official account, then confirm.</p><a class="btn ghost" href="https://x.com/VeyroHood" target="_blank" rel="noopener" id="btn-follow">OPEN X PROFILE</a><button class="primary" id="confirm-follow" type="button" disabled>I FOLLOWED</button></div>
+        <div class="step lock" id="step-discord"><h3><span class="num">3</span> Join Discord</h3><p class="info">Enter the server, then confirm.</p><a class="btn ghost" href="https://discord.gg/6CYd3ewU5" target="_blank" rel="noopener" id="btn-discord">OPEN DISCORD</a><button class="primary" id="confirm-discord" type="button" disabled>I JOINED</button></div>
+        <div class="step lock" id="step-quote"><h3><span class="num">4</span> Quote the pinned post</h3><p class="info">Quote tweet this post, then paste your quote URL.</p><a class="btn ghost" href="https://x.com/VeyroHood/status/2095434542094115048" target="_blank" rel="noopener">OPEN PINNED POST</a><label>Quote status URL</label><input id="quote_link" placeholder="https://x.com/yourname/status/123..." /><button class="primary" id="confirm-quote" type="button">VERIFY QUOTE LINK</button></div>
+        <div class="step lock" id="step-reply"><h3><span class="num">5</span> Reply + mention on pinned post</h3><p class="info">Reply under the pinned post and mention @VeyroHood. Paste a different status URL than the quote.</p><a class="btn ghost" href="https://x.com/VeyroHood/status/2095434542094115048" target="_blank" rel="noopener">OPEN PINNED POST</a><label>Reply status URL</label><input id="reply_link" placeholder="https://x.com/yourname/status/456..." /><button class="primary" id="confirm-reply" type="button">VERIFY REPLY LINK</button></div>
+        <div class="step lock" id="step-ids"><h3><span class="num">6</span> Confirm identities</h3><p class="info">Usernames must match the links you submitted. One X and one Discord per wallet.</p><label>X username</label><input id="x_username" placeholder="@username" /><label>Discord username</label><input id="discord_username" placeholder="name or name#0000" /><input class="hp" id="website" tabindex="-1" autocomplete="off" /><button class="primary" id="confirm-ids" type="button">SIGN & UNLOCK VERIFY</button></div>
+        <div class="step lock" id="step-pay"><h3><span class="num">7</span> On-chain verify</h3><p class="info">Send $0.25 equivalent ETH on Robinhood Chain. Confirmed tx locks this wallet as an applicant. First 1,000 become GTD OG.</p><button class="primary" id="pay-btn" type="button">VERIFY · $0.25 ETH</button><div id="pay-msg" class="msg"></div><div id="ref-wrap" style="display:none"><div class="refbox">Verified. Your unique referral link:<br><b id="ref-link"></b></div><button class="ghost" id="copy-ref" type="button">COPY REFERRAL LINK</button><div class="walletline" id="status-line"></div></div></div>
+      </div>
+    </div>
+    <aside>
+      <div class="card"><div class="kicker">Allocation</div><h2>GTD + FCFS</h2><p class="info">1,000 GTD wallets mint first. 9,000 remaining hoods are only open to registered applicants, first-come at mint.</p><div class="meters" style="margin-top:12px"><div class="meter"><span>GTD left</span><div class="pix" id="gtd-left">1000</div></div><div class="meter"><span>Your rank</span><div class="pix" id="my-rank">—</div></div></div></div>
+      <div class="card"><div class="kicker">Live board</div><h2>Referrals & points</h2><p class="info">Verify = 100 pts. Each valid referral = 50 pts. OG bonus = 250 pts.</p><div id="board"><div class="board-row"><span>No referrals yet</span></div></div><p class="tiny" id="mine-pts"></p></div>
+    </aside>
+  </div>
+  <div class="foot">© 2026 VEYROHOOD · Robinhood Chain</div>
+</div>
+<div class="modal" id="wallet-modal"><div class="sheet"><div class="kicker">Wallets</div><h2>Connect</h2><p class="info">Pick an injected ETH wallet. Robinhood Chain is added automatically if missing.</p><div class="wallets"><button class="wbtn" data-want="metamask"><b>🐰</b> MetaMask</button><button class="wbtn" data-want="rabby"><b>🐰</b> Rabby</button><button class="wbtn" data-want="okx"><b>⬛</b> OKX</button><button class="wbtn" data-want="trust"><b>🛡️</b> Trust</button><button class="wbtn" data-want="coinbase"><b>🔵</b> Coinbase</button><button class="wbtn" data-want="bitget"><b>🟢</b> Bitget</button><button class="wbtn" data-want="tokenpocket"><b>TP</b> TokenPocket</button><button class="wbtn" data-want="any"><b>⬡</b> Browser wallet</button></div><button class="ghost" id="close-modal" type="button">CLOSE</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+<script>
+const CFG={supabaseUrl:"https://zrrhxvrswvqlsbjjgool.supabase.co",supabaseKey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpycmh4dnJzd3ZxbHNiampnb29sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk0NDIxNDgsImV4cCI6MjEwNTAxODE0OH0.kTttSr6ACdLmiL9CzyF1chHkc_BGBOzlsERffdzzUuQ",payTo:"0xf6F80827cBAf83798c7763FCd915C0068F2bE60C",chainId:4663,chainHex:"0x1237",rpc:"https://rpc.mainnet.chain.robinhood.com",explorer:"https://robinhoodchain.blockscout.com",feeUsd:0.25,ogCap:1000,fcfsCap:9000,supply:10000,pinId:"2095434542094115048",ptsVerify:100,ptsRef:50,ptsOg:250};
+const db=supabase.createClient(CFG.supabaseUrl,CFG.supabaseKey);
+const STEPS=["connect","follow","discord","quote","reply","ids","pay"];
+const $=id=>document.getElementById(id);
+const state={wallet:null,provider:null,opened:{follow:false,discord:false},done:{connect:false,follow:false,discord:false,quote:false,reply:false,ids:false,pay:false},quoteUser:"",replyUser:""};
+function pix(n,w=4){return String(Math.max(0,n|0)).padStart(w,"0")}
+function shortAddr(a){return a.slice(0,6)+"…"+a.slice(-4)}
+function siteBase(){return location.origin+location.pathname.replace(/index\.html$/,"")}
+function refFromUrl(){const r=(new URLSearchParams(location.search).get("ref")||"").trim().toLowerCase();return /^0x[a-f0-9]{40}$/.test(r)?r:""}
+function normUser(v){return (v||"").trim().replace(/^@+/,"").toLowerCase()}
+function parseX(url){const m=String(url||"").trim().match(/^https?:\/\/(www\.)?(x\.com|twitter\.com)\/([A-Za-z0-9_]{1,15})\/status\/(\d+)/i);return m?{user:m[3].toLowerCase(),id:m[4]}:null}
+function setMsg(el,type,text){el.className="msg "+(type==="ok"?"ok":"err");el.textContent=text}
+function deviceTag(){const raw=[navigator.userAgent,screen.width,screen.height,navigator.language].join("|");let h=0;for(let i=0;i<raw.length;i++)h=((h<<5)-h)+raw.charCodeAt(i)|0;return "d"+Math.abs(h)}
+function unlock(name){const i=STEPS.indexOf(name);STEPS.forEach((key,idx)=>{const el=$("step-"+key);if(!el)return;el.classList.remove("lock","active","done");if(idx<i)el.classList.add("done");else if(idx===i)el.classList.add("active");else el.classList.add("lock")})}
+function markDone(step,next){state.done[step]=true;unlock(next)}
+$("open-wallets").onclick=()=>$("wallet-modal").classList.add("on");
+$("close-modal").onclick=()=>$("wallet-modal").classList.remove("on");
+$("wallet-modal").addEventListener("click",e=>{if(e.target.id==="wallet-modal")e.target.classList.remove("on")});
+function pickProvider(want){const list=window.ethereum?.providers||(window.ethereum?[window.ethereum]:[]);const hit=list.find(p=>{if(want==="metamask")return p.isMetaMask&&!p.isRabby&&!p.isOkxWallet;if(want==="rabby")return p.isRabby;if(want==="okx")return p.isOkxWallet||p.isOKExWallet||window.okxwallet;if(want==="trust")return p.isTrust||p.isTrustWallet;if(want==="coinbase")return p.isCoinbaseWallet;if(want==="bitget")return p.isBitKeep||p.isBitget;if(want==="tokenpocket")return p.isTokenPocket;return true});if(want==="okx"&&window.okxwallet)return window.okxwallet;return hit||window.ethereum}
+async function switchChain(eth){try{await eth.request({method:"wallet_switchEthereumChain",params:[{chainId:CFG.chainHex}]})}catch(e){if(e.code===4902){await eth.request({method:"wallet_addEthereumChain",params:[{chainId:CFG.chainHex,chainName:"Robinhood Chain",nativeCurrency:{name:"ETH",symbol:"ETH",decimals:18},rpcUrls:[CFG.rpc],blockExplorerUrls:[CFG.explorer]}]})}else throw e}}
+document.querySelectorAll(".wbtn").forEach(btn=>{btn.onclick=async()=>{try{const eth=pickProvider(btn.dataset.want);if(!eth)return alert("Install "+btn.textContent.trim()+" or another EVM wallet.");await switchChain(eth);state.provider=new ethers.BrowserProvider(eth);const accs=await state.provider.send("eth_requestAccounts",[]);state.wallet=ethers.getAddress(accs[0]);$("wallet-line").textContent="Connected · "+state.wallet;$("open-wallets").textContent="WALLET CONNECTED";$("open-wallets").className="ok";$("wallet-modal").classList.remove("on");markDone("connect","follow");await hydrateMine()}catch(e){alert(e.message||"Connect failed")}}});
+$("btn-follow").addEventListener("click",()=>{state.opened.follow=true;$("confirm-follow").disabled=false;$("btn-follow").className="btn ok"});
+$("btn-discord").addEventListener("click",()=>{state.opened.discord=true;$("confirm-discord").disabled=false;$("btn-discord").className="btn ok"});
+$("confirm-follow").onclick=()=>{if(!state.opened.follow)return;markDone("follow","discord")};
+$("confirm-discord").onclick=()=>{if(!state.opened.discord)return;markDone("discord","quote")};
+$("confirm-quote").onclick=()=>{const p=parseX($("quote_link").value);if(!p)return alert("Paste a full X status URL from your quote.");if(p.id===CFG.pinId)return alert("That is the original post. Paste YOUR quote tweet URL.");state.quoteUser=p.user;markDone("quote","reply")};
+$("confirm-reply").onclick=()=>{const p=parseX($("reply_link").value);const q=parseX($("quote_link").value);if(!p)return alert("Paste a full X status URL from your reply.");if(p.id===CFG.pinId)return alert("That is the original post. Paste YOUR reply URL.");if(q&&p.id===q.id)return alert("Quote and reply must be two different posts.");state.replyUser=p.user;markDone("reply","ids")};
+$("confirm-ids").onclick=async()=>{if($("website").value)return;const x=normUser($("x_username").value);const d=normUser($("discord_username").value);if(x.length<2||d.length<2)return alert("Enter both usernames.");if(state.quoteUser&&state.quoteUser!==x)return alert("X username must match the quote link @"+state.quoteUser);if(state.replyUser&&state.replyUser!==x)return alert("X username must match the reply link @"+state.replyUser);if(!state.wallet)return alert("Connect wallet first.");try{const signer=await state.provider.getSigner();await signer.signMessage("VEYROHOOD verify\nwallet:"+state.wallet.toLowerCase()+"\nx:@"+x+"\ndiscord:"+d+"\n"+deviceTag());markDone("ids","pay")}catch(e){alert(e.message||"Signature rejected")}};
+async function feeWei(){try{const r=await fetch("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd");const px=Number((await r.json()).ethereum.usd);if(!px)throw 0;return ethers.parseEther((CFG.feeUsd/px).toFixed(8))}catch(_){return ethers.parseEther("0.00007")}}
+async function saveUser(row){const ex=await db.from("users").select("id").ilike("wallet_address",row.wallet_address).maybeSingle();if(ex.data){const {error}=await db.from("users").update(row).ilike("wallet_address",row.wallet_address);if(error)throw error}else{const {error}=await db.from("users").insert(row);if(error)throw error}}
+$("pay-btn").onclick=async function(){if(!state.wallet)return setMsg($("pay-msg"),"err","Connect first.");if(!state.done.follow||!state.done.discord||!state.done.quote||!state.done.reply||!state.done.ids)return setMsg($("pay-msg"),"err","Finish every mission first.");if($("website").value)return;this.disabled=true;try{const existing=await db.from("users").select("verification_status,is_og").ilike("wallet_address",state.wallet).maybeSingle();if(existing.data&&existing.data.verification_status==="verified"){afterApprove(existing.data.is_og);setMsg($("pay-msg"),"ok","Already verified.");return}const x=normUser($("x_username").value);const d=normUser($("discord_username").value);const [xDup,dDup]=await Promise.all([db.from("users").select("wallet_address").eq("verification_status","verified").ilike("x_username",x).maybeSingle(),db.from("users").select("wallet_address").eq("verification_status","verified").ilike("discord_username",d).maybeSingle()]);if(xDup.data&&xDup.data.wallet_address.toLowerCase()!==state.wallet.toLowerCase())throw new Error("This X username is already bound to another wallet.");if(dDup.data&&dDup.data.wallet_address.toLowerCase()!==state.wallet.toLowerCase())throw new Error("This Discord is already bound to another wallet.");await switchChain(state.provider.provider||window.ethereum);const signer=await state.provider.getSigner();const net=await state.provider.getNetwork();if(Number(net.chainId)!==CFG.chainId)throw new Error("Switch to Robinhood Chain.");const value=await feeWei();const referrer=refFromUrl()&&refFromUrl()!==state.wallet.toLowerCase()?refFromUrl():null;const rec=await(await signer.sendTransaction({to:CFG.payTo,value})).wait();if(!rec||rec.status!==1)throw new Error("Transaction failed.");let ogNow=0;try{const ogQ=await db.from("users").select("*",{count:"exact",head:true}).eq("verification_status","verified").eq("is_og",true);ogNow=ogQ.count||0}catch(_){}const isOg=ogNow<CFG.ogCap;const points=CFG.ptsVerify+(isOg?CFG.ptsOg:0);await saveUser({wallet_address:state.wallet.toLowerCase(),x_username:x,discord_username:d,referrer_wallet:referrer,verification_status:"verified",is_og:isOg,payment_tx_hash:rec.hash,og_assigned_at:isOg?new Date().toISOString():null,referral_count:0,referral_earnings:0,points});await db.from("verifications").insert({wallet_address:state.wallet.toLowerCase(),x_follow:true,discord_join:true,quote_link:$("quote_link").value.trim(),reply_link:$("reply_link").value.trim(),is_verified:true,verified_at:new Date().toISOString(),tx_hash:rec.hash,payment_amount_usd:CFG.feeUsd});if(referrer){await db.from("referrals").insert({referrer_wallet:referrer,referred_wallet:state.wallet.toLowerCase(),payment_amount:CFG.feeUsd,referrer_amount:0.05,tx_hash:rec.hash,status:"paid"});const {count}=await db.from("referrals").select("*",{count:"exact",head:true}).eq("referrer_wallet",referrer).eq("status","paid");const refs=count||0;await db.from("users").update({referral_count:refs,referral_earnings:refs*0.05,points:CFG.ptsVerify+refs*CFG.ptsRef}).ilike("wallet_address",referrer)}afterApprove(isOg);setMsg($("pay-msg"),"ok",isOg?"Verified. GTD OG locked to this wallet.":"Verified. You are on the FCFS applicant list.");await loadStats();await loadBoard()}catch(e){setMsg($("pay-msg"),"err",e.message||"Verify failed")}finally{this.disabled=false}};
+function afterApprove(isOg){state.done.pay=true;$("ref-wrap").style.display="block";$("ref-link").textContent=siteBase()+"?ref="+state.wallet.toLowerCase();$("status-line").textContent=isOg?"Status · GTD OG":"Status · FCFS applicant";$("step-pay").classList.remove("lock");$("step-pay").classList.add("done")}
+$("copy-ref").onclick=async function(){try{await navigator.clipboard.writeText($("ref-link").textContent);this.textContent="COPIED"}catch(_){prompt("Copy",$("ref-link").textContent)}};
+async function hydrateMine(){if(!state.wallet)return;try{const {data}=await db.from("users").select("verification_status,is_og,points,referral_count").ilike("wallet_address",state.wallet).maybeSingle();if(data&&data.verification_status==="verified"){STEPS.forEach(s=>state.done[s]=true);afterApprove(data.is_og);$("mine-pts").textContent="You · "+(data.referral_count||0)+" refs · "+(data.points||0)+" pts"}}catch(_){}}
+async function loadStats(){let joined=0,og=0;try{const q=await db.from("users").select("*",{count:"exact",head:true}).eq("verification_status","verified");joined=q.count||0}catch(_){}try{const q=await db.from("users").select("*",{count:"exact",head:true}).eq("verification_status","verified").eq("is_og",true);og=q.count||0}catch(_){}$("live-line").textContent="LIVE · "+joined+" wallets in";$("og-pix").textContent=pix(og)+" / 1000";$("app-pix").textContent=pix(joined,4);$("gtd-left").textContent=pix(Math.max(0,CFG.ogCap-og));$("og-bar").querySelector("i").style.width=Math.min(100,og/CFG.ogCap*100)+"%";$("app-bar").querySelector("i").style.width=Math.min(100,joined/CFG.supply*100)+"%"}
+async function loadBoard(){try{const {data}=await db.from("users").select("wallet_address,referral_count,points").gt("referral_count",0).order("referral_count",{ascending:false}).limit(12);const rows=data||[];$("board").innerHTML=rows.length?rows.map((r,i)=>`<div class="board-row"><span>${i+1}. ${shortAddr(r.wallet_address)}</span><span>${r.referral_count} refs · ${r.points||0} pts</span></div>`).join(""):`<div class="board-row"><span>No referrals yet</span></div>`}catch(_){$("board").innerHTML=`<div class="board-row"><span>No referrals yet</span></div>`}}
+unlock("connect");loadStats();loadBoard();setInterval(()=>{loadStats();loadBoard();if(state.wallet)hydrateMine()},6000);
+</script>
+</body>
+</html>
